@@ -1,0 +1,46 @@
+
+
+.root {
+    -fx-app-background: #fff4a2;
+    -fx-background-color: -fx-app-background;
+    -fx-padding: 0;
+}
+
+.label {
+    -fx-background-color: brown;
+    -fx-font-size: 8pt;
+    -fx-font-family: "Goudy Stout";
+    -fx-text-fill: yellow;
+    -fx-opacity: 0.6;
+}
+
+.menu-bar{
+    -fx-app-background: #ffcf7b;
+    -fx-background-color: -fx-app-background;
+}
+
+.menu-item{
+    -fx-app-background: #ffcf7b;
+    -fx-background-color: -fx-app-background;
+}
+
+.list-view{
+    -fx-app-background: #ff9363;
+    -fx-background-color: -fx-app-background;
+}
+
+.text-area{
+    -fx-app-background: #ff9363;
+    -fx-background-color: -fx-app-background;
+    -fx-border-color: #ff9363;
+}
+
+.scroll-pane{
+    -fx-app-background: #fff4a2;
+    -fx-background-color: -fx-app-background;
+}
+
+.scroll-bar{
+    -fx-app-background: #fff4a2;
+    -fx-background-color: -fx-app-background;
+}

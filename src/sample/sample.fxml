@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" stylesheets="@General_CSS.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="400.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="loadPokemons" mnemonicParsing="false" onAction="#loadPoke" text="Load Pokemons" />
+                  <MenuItem fx:id="loadOnePokemon" mnemonicParsing="false" onAction="#loadOnePoke" text="Load One Pokemon" />
+              <MenuItem fx:id="sortir" mnemonicParsing="false" onAction="#sortir" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="delete" mnemonicParsing="false" onAction="#delete" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="listView" layoutX="16.0" layoutY="349.0" onMouseClicked="#peticionPoke" prefHeight="209.0" prefWidth="160.0" />
+      <Label layoutX="16.0" layoutY="321.0" prefHeight="21.0" prefWidth="160.0" text="  Pokemons:" />
+      <Label layoutX="189.0" layoutY="321.0" prefHeight="21.0" prefWidth="180.0" text="  Description:" />
+      <TextArea fx:id="textArea" editable="false" layoutX="189.0" layoutY="349.0" prefHeight="137.0" prefWidth="180.0" promptText="Select pokemon" />
+      <ScrollPane fx:id="scrollPane" layoutY="30.0" prefHeight="290.0" prefWidth="385.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="270.0" prefWidth="390.0">
+               <children>
+                  <ImageView fx:id="imgViewGrass" fitHeight="270.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgView" fitHeight="270.0" fitWidth="390.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#zoom" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ImageView fx:id="logo" fitHeight="50.0" fitWidth="130.0" layoutX="200.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

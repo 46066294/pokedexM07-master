@@ -1,0 +1,154 @@
+Crear una aplicació d'escriptori que mostri informació sobre diferents Pokémons. Haurà de complir les següents característiques:
+
+La informació l'heu de aconseguir de la API REST http://pokeapi.co/
+L'aplicació ha de permetre triar d'una llista de Pokémons disponibles, de quin es vol veure la informació.
+La recuperació i tractament de la informació ha d'estar en una (o més) classes separades de la lògica de la GUI. Aquesta classe
+(o classes) NO tindran carregada a memòria sempre tota la informació de tots els Pokémons, només podran tenir de forma permanent
+la llista dels disponibles. Quan es demani de informació d'un pokémon concret es recuperarà de la API.
+La informació mostrada ha d'incloure una imatge del Pokémon. La podeu extreure de la mateixa API.
+Les operacions de l'aplicació han d'estar disponibles mitjançant menús a més a més dels controls que vosaltres trieu.
+Usar algun component de la llibreria ControlsFX.
+Modificar l'aspecte per defecte de la GUI usant fulles d'estil CSS.
+Com sempre heu de cuidar al màxim els aspectes relacionats amb la usabilitat. Fixeu-vos també en la redimensió de la finestra de
+l'aplicació.
+
+EXTRA:
+
+Afegir la possibilitat de fer zoom a la imatge del pokémon. Usar un control del tipus slider per a fer el zoom. I per implementar
+la funcionalitat podeu posar la imatge dins d'un ScrollPane i variar la seva mida.
+
+Entregueu un link al repositori GitHub
+
+----------------------------------------------------------------------------
+
+SQLite NO COMPATIBLE CON HIBERNATE
+
+----------------------------------------------------------------------------
+
+imatges (pokemon 50)
+http://pokeapi.co/media/img/50.png
+
+pokemon (pokemon 50)
+http://pokeapi.co/api/v1/pokemon/50/
+
+info accordion
+https://docs.oracle.com/javafx/2/ui_controls/accordion-titledpane.htm
+
+----------------------------------------------------------------------------
+
+Pokedex
+
+A Pokedex returns the names and resource_uri for all pokemon
+
+GET pokedex/1/
+
+Note: This is a special resource call. Always call /api/v1/pokedex/1/.
+Example request
+
+GET http://pokeapi.co/api/v1/pokedex/1/
+
+
+----------------------------------------------------------------------------
+
+Pokemon
+
+A Pokemon resource represent a single Pokémon
+
+GET pokemon/
+
+GET pokemon/ID/
+
+Note: the ID for Pokémon is special. Use the National pokédex number as the ID to return the desired resource.
+Example request
+
+GET http://pokeapi.co/api/v1/pokemon/1/
+
+
+
+Fields:
+
+    name - the resource name e.g. Bulbasaur.
+    national_id - the id of the resource, this is the National pokedex number of the pokemon.
+    resource_uri - the uri of this resource.
+    created - the creation date of the resource.
+    modified - the last time this resource was modified.
+    abilities - the abilities this pokemon can have.
+    egg_groups - the egg groups this pokemon is in.
+    evolutions - the evolutions this pokemon can evolve into.
+    descriptions - the pokedex descriptions this pokemon has.
+    moves - the moves this pokemon can learn.
+    types - the types this pokemon is.
+    catch_rate - this pokemon's catch rate.
+    species
+    hp
+    attack
+    defense
+    sp_atk
+    sp_def
+    speed
+    total - the total of the above attributes.
+    egg_cycles - number of egg cycles needed.
+    ev_yield - the ev yield for this pokemon.
+    exp - the exp yield from this pokemon.
+    growth_rate - the growth rate of this pokemon.
+    height
+    weight
+    happiness - base happiness for this pokemon.
+    male_femal_ratio - in the format M / F
+
+
+----------------------------------------------------------------------------
+
+
+
+Type
+
+A Type resource represent a single Pokémon type
+
+GET type/
+
+GET type/ID/
+Example request
+
+GET http://pokeapi.co/api/v1/type/1/
+
+Fields:
+
+    name - the resource name e.g. Water.
+    id - the id of the resource.
+    resource_uri - the uri of this resource.
+    created - the creation date of the resource.
+    modified - the last time this resource was modified.
+    ineffective - the types this type is ineffective against.
+    no_effect - the types this type has no effect against.
+    resistance - the types this type is resistant to.
+    super_effective - the types this type is super effective against.
+    weakness - the types this type is weak to.
+
+
+
+----------------------------------------------------------------------------
+
+
+Description
+
+A Description resource represent a single Pokémon pokédex description
+
+GET description/
+
+GET description/ID/
+Example request
+
+GET http://pokeapi.co/api/v1/description/1/
+
+
+Fields:
+
+    name - the resource name.
+    id - the id of the resource.
+    resource_uri - the uri of this resource.
+    created - the creation date of the resource.
+    modified - the last time this resource was modified.
+    games - a list of games this description is in.
+    pokemon - the pokemon this sprite is for.
+
